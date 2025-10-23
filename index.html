@@ -241,6 +241,44 @@
             color: white;
         }
 
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
         /* Benefits Section */
         .benefits {
             padding: 100px 0;
@@ -836,6 +874,14 @@
             .screenshot-img {
                 min-height: 350px;
             }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 25px;
+            }
         }
 
         @media (max-width: 576px) {
@@ -867,6 +913,11 @@
     </style>
 </head>
 <body>
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5545999901802?text=Olá! Gostaria de saber mais sobre o Portal de Saúde da AM2Soluções" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <!-- Header -->
     <header>
         <div class="container header-container">
@@ -1164,7 +1215,7 @@
                             <i class="fas fa-envelope"></i>
                             <div>
                                 <h4>E-mail</h4>
-                                <p>comercial@am2saude.com.br</p>
+                                <p>comercial@amesaude.com.br</p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -1187,26 +1238,26 @@
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/5545999901902?text=Olá! Gostaria de saber mais sobre o Portal de Saúde da AM2Soluções" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
                 
                 <div class="contact-form fade-in delay-1">
-                    <form id="contactForm">
+                    <form id="contactForm" action="mailto:comercial@amesaude.com.br" method="post" enctype="text/plain">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Seu Nome" required>
+                            <input type="text" class="form-control" name="nome" placeholder="Seu Nome" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Seu E-mail" required>
+                            <input type="email" class="form-control" name="email" placeholder="Seu E-mail" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Instituição">
+                            <input type="text" class="form-control" name="instituicao" placeholder="Instituição">
                         </div>
                         <div class="form-group">
-                            <input type="tel" class="form-control" placeholder="Telefone">
+                            <input type="tel" class="form-control" name="telefone" placeholder="Telefone">
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" placeholder="Sua Mensagem" required></textarea>
+                            <textarea class="form-control" name="mensagem" placeholder="Sua Mensagem" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-submit form-control">Enviar Mensagem</button>
                     </form>
@@ -1237,7 +1288,7 @@
                 <div class="footer-col">
                     <h4>Contato</h4>
                     <ul>
-                        <li><i class="fas fa-envelope"></i> comercial@am2saude.com.br</li>
+                        <li><i class="fas fa-envelope"></i> comercial@amesaude.com.br</li>
                         <li><i class="fas fa-globe"></i> am2soluções.com.br</li>
                         <li><i class="fas fa-map-marker-alt"></i> Cascavel - PR</li>
                     </ul>
@@ -1317,9 +1368,12 @@
         
         // Form submission
         document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Obrigado pelo seu interesse! Entraremos em contato em breve.');
-            this.reset();
+            // Allow the form to submit normally to the mailto action
+            // You can add additional validation here if needed
+            setTimeout(() => {
+                alert('Obrigado pelo seu interesse! Entraremos em contato em breve.');
+                this.reset();
+            }, 1000);
         });
     </script>
 </body>
