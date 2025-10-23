@@ -432,9 +432,122 @@
             color: var(--gray);
         }
 
+        /* Advanced Features Section */
+        .advanced-features {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+        }
+
+        .advanced-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .advanced-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 40px 30px;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .advanced-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .advanced-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            font-size: 2rem;
+        }
+
+        .advanced-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .advanced-card p {
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .feature-list li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .feature-list li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        /* Integration Partners */
+        .partners {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            align-items: center;
+        }
+
+        .partner-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .partner-card img {
+            max-width: 120px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .partner-card h4 {
+            color: var(--dark);
+            font-size: 1.1rem;
+        }
+
+        .integration-type {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-top: 5px;
+        }
+
         /* Market Research Section */
         .research {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
             padding: 80px 0;
         }
@@ -914,7 +1027,7 @@
 </head>
 <body>
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/5545999901802?text=Olá! Gostaria de saber mais sobre o Portal de Saúde da AM2Soluções" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/5545999901902?text=Olá! Gostaria de saber mais sobre o Portal de Saúde da AM2Soluções" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -932,7 +1045,7 @@
                 <li><a href="#home">Início</a></li>
                 <li><a href="#benefits">Benefícios</a></li>
                 <li><a href="#features">Funcionalidades</a></li>
-                <li><a href="#research">Inovações</a></li>
+                <li><a href="#advanced">Funcionalidades Avançadas</a></li>
                 <li><a href="#screenshots">Telas</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
@@ -1061,8 +1174,94 @@
         </div>
     </section>
 
+    <!-- Advanced Features Section -->
+    <section class="advanced-features" id="advanced">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Funcionalidades Avançadas</h2>
+                <p>Soluções inovadoras que diferenciam sua instituição no mercado de saúde digital</p>
+            </div>
+            <div class="advanced-grid">
+                <div class="advanced-card fade-in">
+                    <div class="advanced-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>Integração via API com ERP</h3>
+                    <p>Conexão perfeita com seus sistemas existentes para sincronização de dados em tempo real.</p>
+                    <ul class="feature-list">
+                        <li>Integração com principais ERPs do mercado</li>
+                        <li>Sincronização de prontuários e agendamentos</li>
+                        <li>API RESTful com documentação completa</li>
+                        <li>Autenticação segura com OAuth 2.0</li>
+                        <li>Webhooks para notificações em tempo real</li>
+                    </ul>
+                </div>
+                <div class="advanced-card fade-in delay-1">
+                    <div class="advanced-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>Integração Completa com WhatsApp</h3>
+                    <p>Comunicação automatizada e personalizada através da plataforma mais popular do Brasil.</p>
+                    <ul class="feature-list">
+                        <li>Lembretes de consultas automáticos</li>
+                        <li>Envio de resultados de exames</li>
+                        <li>Chatbot para triagem inicial</li>
+                        <li>Confirmação de presença</li>
+                        <li>Mensagens de follow-up pós-consulta</li>
+                    </ul>
+                </div>
+                <div class="advanced-card fade-in delay-2">
+                    <div class="advanced-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Pesquisa NPS Integrada</h3>
+                    <p>Sistema de feedback contínuo para medir e melhorar a satisfação dos pacientes.</p>
+                    <ul class="feature-list">
+                        <li>NPS automatizado pós-consulta</li>
+                        <li>Dashboard de métricas em tempo real</li>
+                        <li>Segmentação por especialidade</li>
+                        <li>Alertas para feedbacks negativos</li>
+                        <li>Relatórios comparativos mensais</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Integração com Sistemas Existentes</h2>
+                <p>Conectamos com os principais tipos de sistemas utilizados no mercado de saúde</p>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-card fade-in">
+                    <i class="fas fa-cube fa-3x" style="color: var(--primary); margin-bottom: 15px;"></i>
+                    <h4>Sistemas ERP</h4>
+                    <p class="integration-type">Integração completa</p>
+                </div>
+                <div class="partner-card fade-in delay-1">
+                    <i class="fas fa-database fa-3x" style="color: var(--secondary); margin-bottom: 15px;"></i>
+                    <h4>Bancos de Dados</h4>
+                    <p class="integration-type">Sincronização em tempo real</p>
+                </div>
+                <div class="partner-card fade-in delay-2">
+                    <i class="fas fa-server fa-3x" style="color: var(--accent); margin-bottom: 15px;"></i>
+                    <h4>Serviços em Nuvem</h4>
+                    <p class="integration-type">APIs RESTful</p>
+                </div>
+                <div class="partner-card fade-in delay-3">
+                    <i class="fas fa-cloud fa-3x" style="color: var(--primary-dark); margin-bottom: 15px;"></i>
+                    <h4>Sistemas Legados</h4>
+                    <p class="integration-type">Adaptadores personalizados</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Market Research Section -->
-    <section class="research" id="research">
+    <section class="research">
         <div class="container research-container">
             <div class="research-content fade-in">
                 <h2>Inovações Baseadas em Pesquisas de Mercado</h2>
@@ -1280,7 +1479,7 @@
                         <li><a href="#home">Início</a></li>
                         <li><a href="#benefits">Benefícios</a></li>
                         <li><a href="#features">Funcionalidades</a></li>
-                        <li><a href="#research">Inovações</a></li>
+                        <li><a href="#advanced">Funcionalidades Avançadas</a></li>
                         <li><a href="#screenshots">Telas</a></li>
                         <li><a href="#contact">Contato</a></li>
                     </ul>
