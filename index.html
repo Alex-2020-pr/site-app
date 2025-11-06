@@ -1250,7 +1250,7 @@
 </head>
 <body>
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/5545999901902?text=Olá! Gostaria de saber mais sobre o Portal de Saúde da AM2Soluções" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/55459999801802?text=Olá! Gostaria de saber mais sobre o Portal de Saúde da AM2Soluções" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -1258,7 +1258,7 @@
     <header>
         <div class="container header-container">
             <a href="#home" class="logo">
-                <img src="am2logo.png" alt="AM2Soluções" class="logo-img">
+                <img src="https://am2saude.com.br/wp-content/uploads/2025/04/Logo-2026-Completa-1024x640-1.png" alt="AM2Soluções" class="logo-img">
                 <h1 class="logo-text">AM2<span>Soluções</span></h1>
             </a>
             <div class="mobile-toggle">
@@ -1402,8 +1402,8 @@
     <section class="advanced-features" id="advanced">
         <div class="container">
             <div class="section-title fade-in">
-                <h2>Funcionalidades Avançadas</h2>
-                <p>Soluções inovadoras que diferenciam sua instituição no mercado de saúde digital</p>
+                <h2 style="color: white;">Funcionalidades Avançadas</h2>
+                <p style="color: rgba(255,255,255,0.9);">Soluções inovadoras que diferenciam sua instituição no mercado de saúde digital</p>
             </div>
             <div class="advanced-grid">
                 <div class="advanced-card fade-in">
@@ -1528,7 +1528,6 @@
                             Integração WhatsApp
                         </div>
                         <ul class="plan-feature-list">
-                            <li>Sistema de multi-atendentes</li>
                             <li>Lembretes automáticos de consulta</li>
                             <li>Confirmação de presença</li>
                             <li>Notificações de exames</li>
@@ -1788,6 +1787,13 @@
                     
                     <div class="contact-details">
                         <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Telefone</h4>
+                                <p>45 9 99980-1802</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
                             <i class="fas fa-envelope"></i>
                             <div>
                                 <h4>E-mail</h4>
@@ -1814,28 +1820,28 @@
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://wa.me/5545999901902?text=Olá! Gostaria de saber mais sobre o Portal de Saúde da AM2Soluções" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/55459999801802?text=Olá! Gostaria de saber mais sobre o Portal de Saúde da AM2Soluções" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
                 
                 <div class="contact-form fade-in delay-1">
-                    <form id="contactForm" action="mailto:comercial@am2saude.com.br" method="post" enctype="text/plain">
+                    <form id="contactForm">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="nome" placeholder="Seu Nome" required>
+                            <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu Nome" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" name="email" placeholder="Seu E-mail" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Seu E-mail" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="instituicao" placeholder="Instituição">
+                            <input type="text" class="form-control" id="instituicao" name="instituicao" placeholder="Instituição">
                         </div>
                         <div class="form-group">
-                            <input type="tel" class="form-control" name="telefone" placeholder="Telefone">
+                            <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Telefone">
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" name="mensagem" placeholder="Sua Mensagem" required></textarea>
+                            <textarea class="form-control" id="mensagem" name="mensagem" placeholder="Sua Mensagem" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-submit form-control">Enviar Mensagem</button>
+                        <button type="button" id="whatsappSubmit" class="btn btn-submit form-control">Enviar via WhatsApp</button>
                     </form>
                 </div>
             </div>
@@ -1868,6 +1874,7 @@
                 <div class="footer-col">
                     <h4>Contato</h4>
                     <ul>
+                        <li><i class="fas fa-phone-alt"></i> 45 9 99980-1802</li>
                         <li><i class="fas fa-envelope"></i> comercial@am2saude.com.br</li>
                         <li><i class="fas fa-globe"></i> am2soluções.com.br</li>
                         <li><i class="fas fa-map-marker-alt"></i> Cascavel - PR</li>
@@ -2059,16 +2066,6 @@
         window.addEventListener('load', fadeInOnScroll);
         window.addEventListener('scroll', fadeInOnScroll);
         
-        // Form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            // Allow the form to submit normally to the mailto action
-            // You can add additional validation here if needed
-            setTimeout(() => {
-                alert('Obrigado pelo seu interesse! Entraremos em contato em breve.');
-                this.reset();
-            }, 1000);
-        });
-        
         // Plan buttons
         document.querySelectorAll('.btn-plan').forEach(button => {
             button.addEventListener('click', function() {
@@ -2177,6 +2174,32 @@
             lightboxModal.classList.remove('active');
             document.body.style.overflow = 'auto';
         }
+
+        // WhatsApp Form Submission
+        document.getElementById('whatsappSubmit').addEventListener('click', function() {
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const instituicao = document.getElementById('instituicao').value;
+            const telefone = document.getElementById('telefone').value;
+            const mensagem = document.getElementById('mensagem').value;
+
+            if (!nome || !email || !mensagem) {
+                alert('Por favor, preencha pelo menos o nome, e-mail e mensagem.');
+                return;
+            }
+
+            let texto = `Olá! Gostaria de solicitar uma demonstração do Portal de Saúde.\n\n`;
+            texto += `*Nome:* ${nome}\n`;
+            texto += `*E-mail:* ${email}\n`;
+            if (instituicao) texto += `*Instituição:* ${instituicao}\n`;
+            if (telefone) texto += `*Telefone:* ${telefone}\n`;
+            texto += `*Mensagem:* ${mensagem}`;
+
+            const textoCodificado = encodeURIComponent(texto);
+            const urlWhatsApp = `https://wa.me/55459999801802?text=${textoCodificado}`;
+            
+            window.open(urlWhatsApp, '_blank');
+        });
     </script>
 </body>
 </html>
