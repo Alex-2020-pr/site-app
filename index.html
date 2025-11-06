@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+        /* TODOS OS ESTILOS CSS PERMANECEM EXATAMENTE IGUAIS */
         :root {
             --primary: #2a7de1;
             --primary-dark: #1c5fb3;
@@ -652,112 +653,33 @@
             font-weight: bold;
         }
 
-        /* Integration Partners */
-        .partners {
-            padding: 80px 0;
-            background-color: var(--light);
-        }
-
-        .partners-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            align-items: center;
-        }
-
-        .partner-card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
-        }
-
-        .partner-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        .partner-card img {
-            max-width: 120px;
-            height: 60px;
-            object-fit: contain;
-            margin-bottom: 15px;
-        }
-
-        .partner-card h4 {
-            color: var(--dark);
-            font-size: 1.1rem;
-        }
-
-        .integration-type {
-            font-size: 0.9rem;
-            color: var(--gray);
-            margin-top: 5px;
-        }
-
-        /* Market Research Section */
-        .research {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
             padding: 80px 0;
         }
 
-        .research-container {
+        .stats-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 40px;
-            align-items: center;
+            justify-content: space-around;
+            text-align: center;
         }
 
-        .research-content {
-            flex: 1;
-            min-width: 300px;
+        .stat-item {
+            padding: 20px;
         }
 
-        .research-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
         }
 
-        .research-content p {
-            margin-bottom: 25px;
+        .stat-text {
+            font-size: 1.2rem;
             opacity: 0.9;
-        }
-
-        .research-features {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .research-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 25px;
-        }
-
-        .research-icon {
-            width: 50px;
-            height: 50px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            flex-shrink: 0;
-            font-size: 1.2rem;
-        }
-
-        .research-text h4 {
-            margin-bottom: 5px;
-            font-size: 1.2rem;
-        }
-
-        .research-text p {
-            opacity: 0.8;
-            font-size: 0.95rem;
         }
 
         /* Screenshots Section */
@@ -830,35 +752,6 @@
         .screenshot-info p {
             color: var(--gray);
             font-size: 0.9rem;
-        }
-
-        /* Stats Section */
-        .stats {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 80px 0;
-        }
-
-        .stats-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            text-align: center;
-        }
-
-        .stat-item {
-            padding: 20px;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 10px;
-        }
-
-        .stat-text {
-            font-size: 1.2rem;
-            opacity: 0.9;
         }
 
         /* Contact Section */
@@ -1695,7 +1588,6 @@
                         </div>
                         <ul class="plan-feature-list">
                             <li>Todos os recursos do Standard</li>
-                            <li>Análise preditiva de saúde</li>
                             <li>Recomendações personalizadas</li>
                         </ul>
                         
@@ -1713,87 +1605,6 @@
                     <div class="plan-action">
                         <button class="btn-plan">Solicitar Demonstração</button>
                         <div class="plan-storage">50 GB de armazenamento<br>Adicional: R$ 15.00/GB</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Integration Partners -->
-    <section class="partners">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Integração com Sistemas Existentes</h2>
-                <p>Conectamos com os principais tipos de sistemas utilizados no mercado de saúde</p>
-            </div>
-            <div class="partners-grid">
-                <div class="partner-card fade-in">
-                    <i class="fas fa-cube fa-3x" style="color: var(--primary); margin-bottom: 15px;"></i>
-                    <h4>Sistemas ERP</h4>
-                    <p class="integration-type">Integração completa</p>
-                </div>
-                <div class="partner-card fade-in delay-1">
-                    <i class="fas fa-database fa-3x" style="color: var(--secondary); margin-bottom: 15px;"></i>
-                    <h4>Bancos de Dados</h4>
-                    <p class="integration-type">Sincronização em tempo real</p>
-                </div>
-                <div class="partner-card fade-in delay-2">
-                    <i class="fas fa-server fa-3x" style="color: var(--accent); margin-bottom: 15px;"></i>
-                    <h4>Serviços em Nuvem</h4>
-                    <p class="integration-type">APIs RESTful</p>
-                </div>
-                <div class="partner-card fade-in delay-3">
-                    <i class="fas fa-cloud fa-3x" style="color: var(--primary-dark); margin-bottom: 15px;"></i>
-                    <h4>Sistemas Legados</h4>
-                    <p class="integration-type">Adaptadores personalizados</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Market Research Section -->
-    <section class="research">
-        <div class="container research-container">
-            <div class="research-content fade-in">
-                <h2>Inovações Baseadas em Pesquisas de Mercado</h2>
-                <p>Analisamos as principais tendências do setor de saúde digital para oferecer diferenciais competitivos reais para sua instituição.</p>
-                <a href="#contact" class="btn">Conhecer Nossas Soluções</a>
-            </div>
-            <div class="research-features fade-in delay-1">
-                <div class="research-item">
-                    <div class="research-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <div class="research-text">
-                        <h4>Inteligência Artificial</h4>
-                        <p>Algoritmos preditivos para identificar pacientes de risco e sugerir intervenções proativas.</p>
-                    </div>
-                </div>
-                <div class="research-item">
-                    <div class="research-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="research-text">
-                        <h4>Chatbot Integrado</h4>
-                        <p>Assistente virtual 24/7 para triagem inicial e esclarecimento de dúvidas comuns.</p>
-                    </div>
-                </div>
-                <div class="research-item">
-                    <div class="research-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <div class="research-text">
-                        <h4>Analytics Avançado</h4>
-                        <p>Dashboard com métricas de desempenho e satisfação em tempo real.</p>
-                    </div>
-                </div>
-                <div class="research-item">
-                    <div class="research-icon">
-                        <i class="fas fa-gamepad"></i>
-                    </div>
-                    <div class="research-text">
-                        <h4>Gamificação</h4>
-                        <p>Sistema de recompensas para engajar pacientes em tratamentos de longo prazo.</p>
                     </div>
                 </div>
             </div>
@@ -1830,7 +1641,7 @@
                 <p>Design intuitivo e experiência do usuário otimizada para pacientes e profissionais</p>
             </div>
             <div class="screenshots-container">
-                <!-- Telas anteriores mantidas -->
+                <!-- Telas existentes mantidas -->
                 <div class="screenshot-card fade-in">
                     <div class="screenshot-img">
                         <img src="login.png" alt="Tela de Login do Portal de Saúde" class="lightbox-trigger">
@@ -1842,11 +1653,11 @@
                 </div>
                 <div class="screenshot-card fade-in delay-1">
                     <div class="screenshot-img">
-                        <img src="app.png" alt="Dashboard do Portal de Saúde" class="lightbox-trigger">
+                        <img src="telaapp2.png" alt="Dashboard Principal do Portal de Saúde" class="lightbox-trigger">
                     </div>
                     <div class="screenshot-info">
-                        <h3>Dashboard Personalizado</h3>
-                        <p>Visão geral com acesso rápido às principais funcionalidades</p>
+                        <h3>Dashboard Principal</h3>
+                        <p>Visão geral com acesso rápido às principais funcionalidades e próximas consultas</p>
                     </div>
                 </div>
                 <div class="screenshot-card fade-in delay-2">
@@ -1862,16 +1673,6 @@
                 <!-- Novas telas adicionadas -->
                 <div class="screenshot-card fade-in delay-3">
                     <div class="screenshot-img">
-                        <img src="telaapp2.png" alt="Dashboard Principal do Portal de Saúde" class="lightbox-trigger">
-                    </div>
-                    <div class="screenshot-info">
-                        <h3>Dashboard Principal</h3>
-                        <p>Visão geral com acesso rápido às principais funcionalidades e próximas consultas</p>
-                    </div>
-                </div>
-                
-                <div class="screenshot-card fade-in">
-                    <div class="screenshot-img">
                         <img src="assistente_de_IA.png" alt="Assistente de IA de Saúde" class="lightbox-trigger">
                     </div>
                     <div class="screenshot-info">
@@ -1880,7 +1681,7 @@
                     </div>
                 </div>
                 
-                <div class="screenshot-card fade-in delay-1">
+                <div class="screenshot-card fade-in">
                     <div class="screenshot-img">
                         <img src="telemedicina.png" alt="Plataforma de Telemedicina" class="lightbox-trigger">
                     </div>
@@ -1890,7 +1691,7 @@
                     </div>
                 </div>
                 
-                <div class="screenshot-card fade-in delay-2">
+                <div class="screenshot-card fade-in delay-1">
                     <div class="screenshot-img">
                         <img src="lembrete2.png" alt="Gestão de Lembretes e Consultas" class="lightbox-trigger">
                     </div>
@@ -1900,8 +1701,8 @@
                     </div>
                 </div>
                 
-                <!-- Telas anteriores mantidas -->
-                <div class="screenshot-card fade-in delay-3">
+                <!-- Telas existentes mantidas -->
+                <div class="screenshot-card fade-in delay-2">
                     <div class="screenshot-img">
                         <img src="exames.png" alt="Resultados de Exames" class="lightbox-trigger">
                     </div>
@@ -1910,7 +1711,7 @@
                         <p>Acesso rápido e organizado aos resultados de exames</p>
                     </div>
                 </div>
-                <div class="screenshot-card fade-in">
+                <div class="screenshot-card fade-in delay-3">
                     <div class="screenshot-img">
                         <img src="documentos.png" alt="Documentos Médicos" class="lightbox-trigger">
                     </div>
@@ -1919,13 +1720,54 @@
                         <p>Receitas, atestados e laudos médicos sempre disponíveis</p>
                     </div>
                 </div>
-                <div class="screenshot-card fade-in delay-1">
+                <div class="screenshot-card fade-in">
                     <div class="screenshot-img">
                         <img src="perfil.png" alt="Perfil do Paciente" class="lightbox-trigger">
                     </div>
                     <div class="screenshot-info">
                         <h3>Perfil do Paciente</h3>
                         <p>Gestão completa dos dados pessoais e de saúde</p>
+                    </div>
+                </div>
+
+                <!-- NOVAS TELAS ADICIONADAS -->
+                <div class="screenshot-card fade-in delay-1">
+                    <div class="screenshot-img">
+                        <img src="pesquisa-nps.png" alt="Dashboard de Pesquisa NPS" class="lightbox-trigger">
+                    </div>
+                    <div class="screenshot-info">
+                        <h3>Pesquisa NPS</h3>
+                        <p>Dashboard completo com resultados de pesquisas de satisfação</p>
+                    </div>
+                </div>
+                
+                <div class="screenshot-card fade-in delay-2">
+                    <div class="screenshot-img">
+                        <img src="sinaisvitais.png" alt="Monitoramento de Sinais Vitais" class="lightbox-trigger">
+                    </div>
+                    <div class="screenshot-info">
+                        <h3>Sinais Vitais</h3>
+                        <p>Monitoramento em tempo real da pressão arterial, glicemia e frequência cardíaca</p>
+                    </div>
+                </div>
+                
+                <div class="screenshot-card fade-in delay-3">
+                    <div class="screenshot-img">
+                        <img src="envio_notifica.png" alt="Sistema de Envio de Notificações" class="lightbox-trigger">
+                    </div>
+                    <div class="screenshot-info">
+                        <h3>Envio de Notificações</h3>
+                        <p>Sistema completo para envio de notificações push personalizadas</p>
+                    </div>
+                </div>
+                
+                <div class="screenshot-card fade-in">
+                    <div class="screenshot-img">
+                        <img src="painel_hospital.png" alt="Painel Administrativo do Hospital" class="lightbox-trigger">
+                    </div>
+                    <div class="screenshot-info">
+                        <h3>Painel do Hospital</h3>
+                        <p>Dashboard administrativo com métricas e gestão de pacientes</p>
                     </div>
                 </div>
             </div>
